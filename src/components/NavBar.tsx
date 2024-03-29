@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { CustomButton } from './CustomButton'
 
-import { logo, menu, search, thirdweb } from '../assets'
+import { menu, search, thirdweb } from '../assets'
 
 import { navlinks } from '../constants'
 import { useState } from 'react';
@@ -54,7 +54,7 @@ export const NavBar = () => {
           src={menu}
           alt="Menu"
           className='w-[34px] h-[34px] object-contain cursor-pointer'
-          onClick={() => setToggleDrawer(!toggleDrawer)}
+          onClick={() => setToggleDrawer(prev => !prev)}
         />
 
         <div className={`absolute top-[60px] ring-0 left-0 bg-[#1c1c24] z-10 shadow-secondary py-4 rounded-md w-full
